@@ -6,8 +6,6 @@ public class DVD {
     private int length;
     private float cost;
 
-    //placeholder
-
     public DVD(String name, String tag, String director_name, int runtime, float price)
     {
         this.title = name;
