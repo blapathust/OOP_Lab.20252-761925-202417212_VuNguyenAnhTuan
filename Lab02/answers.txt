@@ -1,0 +1,6 @@
+10. Java does not allow this. In Java, method and constructor overloading is based on the method signature, which includes the number and types of parameters. Since both "title" and "category" are of type String, both constructors would have the same signature: DigitalVideoDisc(String).
+
+15
+	1. The titles remain because Java passes the reference by value. When passing jungleDVD and cinderellaDVD to the swap method, the method receives copies of the memory addresses/reference. The method then swaps these local copies, but the original variables in the main method still point to their original objects
+	2. The title is changed because, although the reference is passed by value, that value still points to the exact same object in memory. Therefore, calling dvd.setTitle(title) inside the method modifies the actual object that the original jungleDVD variable is pointing to.
+=> Java is a pass by value programming language
