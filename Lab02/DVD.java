@@ -15,6 +15,13 @@ public class DVD {
         this.cost = price;
     }
 
+    public DVD(String name, String tag, float price)
+    {
+        this.title = name;
+        this.category = tag;
+        this.cost = price;
+    }
+
     public String getTitle()
     {
         return title;
