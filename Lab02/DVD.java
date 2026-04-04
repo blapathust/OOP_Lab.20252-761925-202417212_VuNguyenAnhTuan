@@ -1,5 +1,6 @@
 public class DVD {
     
+    private static int DVDnum = 0;
     private String title;
     private String category;
     private String director;
@@ -13,6 +14,8 @@ public class DVD {
         this.director = director_name;
         this.length = runtime;
         this.cost = price;
+
+        DVDnum++;
     }
 
     public DVD(String name, String tag, float price)
@@ -20,6 +23,20 @@ public class DVD {
         this.title = name;
         this.category = tag;
         this.cost = price;
+
+        DVDnum++;
+    }
+
+    public DVD(String name)
+    {
+        this.title = name;
+
+        DVDnum++;
+    }
+
+    public DVD(String name)
+    {
+        this.title = name;
     }
 
     public String getTitle()
@@ -45,5 +62,10 @@ public class DVD {
     public float getCost()
     {
         return cost;
+    }
+
+    protected void setTitle(String input)
+    {
+        this.title = input;
     }
 }
