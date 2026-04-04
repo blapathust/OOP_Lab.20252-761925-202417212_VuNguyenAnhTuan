@@ -22,6 +22,11 @@ public class DVD {
         this.cost = price;
     }
 
+    public DVD(String name)
+    {
+        this.title = name;
+    }
+
     public String getTitle()
     {
         return title;
