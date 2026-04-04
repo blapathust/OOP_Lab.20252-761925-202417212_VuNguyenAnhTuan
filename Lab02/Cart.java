@@ -38,7 +38,7 @@ public class Cart {
 
         String added = dvd1.getTitle() + " and " + dvd2.getTitle();
 
-        //cost += dvd1.getCost() + dvd2.getCost();
+        cost += dvd1.getCost() + dvd2.getCost();
 
         itemsOrdered.add(dvd1);
         itemsOrdered.add(dvd2);
