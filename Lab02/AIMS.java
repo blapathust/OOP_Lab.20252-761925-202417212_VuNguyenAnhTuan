@@ -13,7 +13,7 @@ class AIMS
         DVD dvd3 = new DVD("Aladdin", "Animation", 18.99f);
         anOrder.addDVD(dvd3);
 
-        System.out.println("Total cost is: " + anOrder.getCost());
+        //System.out.println("Total cost is: " + anOrder.getCost());
 
         anOrder.removeDVD(dvd3);
 
