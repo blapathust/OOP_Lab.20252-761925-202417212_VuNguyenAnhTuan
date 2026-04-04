@@ -46,4 +46,9 @@ public class DVD {
     {
         return cost;
     }
+
+        protected void setTitle(String input)
+    {
+        this.title = input;
+    }
 }
