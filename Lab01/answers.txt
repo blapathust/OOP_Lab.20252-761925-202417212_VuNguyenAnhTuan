@@ -1,3 +1,0 @@
-6.1
-	- The final popup says that we chose NO because the integer variable holds 0 if we choose to cancel, and the final popup is configured to show that we chose YES if the variable = 1, NO if variable = 0.
-	- We can use the "public static int showConfirmDialog(Component parentComponent, Object message, String title, int optionType)" method and set the optionType parameter to "JOptionPane.YES_NO_OPTION" for plain Yes/No, or use "JOptionPane.showOptionDialog(Component parentComponent, Object message, String title, int optionType, int messageType, Icon icon, Object[] options, Object initialValue)" and pass in a String array with custom options.
