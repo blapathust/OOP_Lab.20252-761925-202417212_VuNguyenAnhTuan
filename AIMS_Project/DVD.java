@@ -34,11 +34,6 @@ public class DVD {
         DVDnum++;
     }
 
-    public DVD(String name)
-    {
-        this.title = name;
-    }
-
     public String getTitle()
     {
         return title;
