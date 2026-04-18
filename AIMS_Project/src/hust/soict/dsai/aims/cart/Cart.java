@@ -1,3 +1,6 @@
+package hust.soict.dsai.aims.cart;
+
+import hust.soict.dsai.aims.disc.DVD;
 import java.util.LinkedList;
 
 public class Cart {
@@ -5,9 +8,9 @@ public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
     protected float cost = 0;
 
-    private LinkedList itemsOrdered = new LinkedList<DVD>();
+    private LinkedList<DVD> itemsOrdered = new LinkedList<>();
 
-    protected void addDVD(DVD dvd)
+    public void addDVD(DVD dvd)
     {
         if (itemsOrdered.size() == MAX_NUMBERS_ORDERED) {
             
@@ -27,7 +30,7 @@ public class Cart {
         if (itemsOrdered.size() == MAX_NUMBERS_ORDERED) System.out.println("Your cart is full, no new item can be added.");
     }
 
-    protected void addDVD(DVD dvd1, DVD dvd2)
+    public void addDVD(DVD dvd1, DVD dvd2)
     {
         if (itemsOrdered.size() == MAX_NUMBERS_ORDERED) {
             
@@ -48,7 +51,7 @@ public class Cart {
         if (itemsOrdered.size() == MAX_NUMBERS_ORDERED) System.out.println("Your cart is full, no new item can be added.");
     }
 
-    protected void removeDVD(DVD dvd)
+    public void removeDVD(DVD dvd)
     {
         String removed = dvd.getTitle();
 
@@ -61,7 +64,7 @@ public class Cart {
         if (itemsOrdered.isEmpty()) System.out.println("Your cart empty.");
     }
 
-    protected float getCost()
+    public float getCost()
     {
         return cost;
     }
