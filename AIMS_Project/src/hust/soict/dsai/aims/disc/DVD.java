@@ -1,3 +1,5 @@
+package hust.soict.dsai.aims.disc;
+
 public class DVD {
     
     private static int DVDnum = 0;
@@ -59,7 +61,7 @@ public class DVD {
         return cost;
     }
 
-    protected void setTitle(String input)
+    public void setTitle(String input)
     {
         this.title = input;
     }
