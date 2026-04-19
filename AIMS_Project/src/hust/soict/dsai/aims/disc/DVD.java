@@ -65,4 +65,35 @@ public class DVD {
     {
         this.title = input;
     }
+
+    public String DVDtoString(DVD dvd)
+    {
+        StringBuilder sb = new StringBuilder();
+        boolean any = false;
+
+    sb.append("DVD - ").append(dvd.getTitle());
+
+    if (category != null && !category.isBlank()) {
+        if (!any) { sb.append(" - ").append(dvd.getCategory()); any = true; }
+        else sb.append(" - ").append(dvd.getCategory());
+    }
+
+    if (director != null && !director.isBlank()) {
+        if (!any) { sb.append("DVD - ").append(dvd.getDirector()); any = true; }
+        else sb.append(" - ").append(dvd.getDirector());
+    }
+
+    if (length > 0) {
+        if (!any) { sb.append(" - ").append(dvd.getLength()); any = true; }
+        else sb.append(" - ").append(dvd.getLength());
+    }
+
+    if (cost > 0.0f) {
+        if (!any) sb.append(" - ").append(String.format("%.2f", cost)).append("$");
+        else sb.append(": ").append(String.format("%.2f", cost)).append("$");
+    }
+
+    return sb.toString();
+    }
 }
+
