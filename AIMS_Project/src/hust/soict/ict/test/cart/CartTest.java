@@ -1,7 +1,7 @@
-package hust.soict.dsai.test.cart;
+package hust.soict.ict.test.cart;
 
-import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.disc.DVD;
+import hust.soict.ict.aims.cart.Cart;
+import hust.soict.ict.aims.disc.DVD;
 import java.util.ArrayList;
 
 public class CartTest {

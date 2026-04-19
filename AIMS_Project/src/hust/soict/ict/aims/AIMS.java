@@ -1,7 +1,7 @@
-package hust.soict.dsai.aims;
+package hust.soict.ict.aims;
 
-import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.disc.DVD;
+import hust.soict.ict.aims.cart.Cart;
+import hust.soict.ict.aims.disc.DVD;
 
 class AIMS
 {

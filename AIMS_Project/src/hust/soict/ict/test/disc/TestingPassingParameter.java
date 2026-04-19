@@ -1,6 +1,6 @@
-package hust.soict.dsai.test.disc;
+package hust.soict.ict.test.disc;
 
-import hust.soict.dsai.aims.disc.DVD;
+import hust.soict.ict.aims.disc.DVD;
 
 public class TestingPassingParameter {
     
