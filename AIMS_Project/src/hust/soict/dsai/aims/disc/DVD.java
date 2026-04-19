@@ -8,6 +8,7 @@ public class DVD {
     private String director;
     private int length;
     private float cost;
+    private final int id;
 
     public DVD(String name, String tag, String director_name, int runtime, float price)
     {
@@ -18,6 +19,7 @@ public class DVD {
         this.cost = price;
 
         DVDnum++;
+        this.id = DVDnum;
     }
 
     public DVD(String name, String tag, float price)
@@ -27,6 +29,7 @@ public class DVD {
         this.cost = price;
 
         DVDnum++;
+        this.id = DVDnum;
     }
 
     public DVD(String name)
@@ -34,6 +37,12 @@ public class DVD {
         this.title = name;
 
         DVDnum++;
+        this.id = DVDnum;
+    }
+
+    public int getID()
+    {
+        return id;
     }
 
     public String getTitle()
