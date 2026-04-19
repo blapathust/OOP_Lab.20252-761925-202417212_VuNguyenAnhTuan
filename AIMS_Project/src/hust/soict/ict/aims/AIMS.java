@@ -1,7 +1,7 @@
 package hust.soict.ict.aims;
 
 import hust.soict.ict.aims.cart.Cart;
-import hust.soict.ict.aims.disc.DVD;
+import hust.soict.ict.aims.media.DVD;
 
 class AIMS
 {

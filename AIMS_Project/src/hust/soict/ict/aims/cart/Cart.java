@@ -1,6 +1,6 @@
 package hust.soict.ict.aims.cart;
 
-import hust.soict.ict.aims.disc.DVD;
+import hust.soict.ict.aims.media.DVD;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -86,7 +86,7 @@ public class Cart {
     public DVD searchByID(int id)
     {
         for (DVD dvd: itemsOrdered) {
-            if (dvd.getID() == id) return dvd;
+            if (dvd.getId() == id) return dvd;
         }
 
         return null;
