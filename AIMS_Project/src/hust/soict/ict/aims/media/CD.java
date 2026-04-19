@@ -2,18 +2,14 @@ package hust.soict.ict.aims.media;
 
 import java.util.ArrayList;
 
-public class CD extends Disc{
+public class CD extends Disc implements Playable {
 
     public CD(String title, String category, String director, int length, float cost) {
-        super();
-        this.setTitle(title);
-        this.setCategory(category);
-        this.setDirector(director);
-        this.setLength(length);
-        this.setCost(cost);
+
+        super(title, category, director, length, cost);
     }
 
-    public class Track {
+    public class Track implements Playable {
         private String title;
         private int length;
 
@@ -28,6 +24,11 @@ public class CD extends Disc{
 
         public int getLength() {
             return length;
+        }
+
+        public void play() { 
+            System.out.println("Playing DVD: " + this.getTitle()); 
+            System.out.println("DVD length: " + this.getLength()); 
         }
     }
 
@@ -60,5 +61,14 @@ public class CD extends Disc{
             totalLength += track.getLength();
         }
         return totalLength;
+    }
+
+    public void play() { 
+        
+        System.out.println("Playing CD: " + this.getTitle());
+
+        for (Track track : tracks) {
+            track.play();
+        }
     }
 }

@@ -25,7 +25,10 @@ public class Book extends Media {
 
     private List<String> authors = new ArrayList<String>();
 
-    public Book() {}
+    public Book(String title, String category, float cost) {
+
+        super(title, category, cost);
+    }
 
     
 }
