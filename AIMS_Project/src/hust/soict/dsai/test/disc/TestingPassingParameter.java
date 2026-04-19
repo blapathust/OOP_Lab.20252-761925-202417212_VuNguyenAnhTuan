@@ -1,3 +1,7 @@
+package hust.soict.dsai.test.disc;
+
+import hust.soict.dsai.aims.disc.DVD;
+
 public class TestingPassingParameter {
     
     public static void main(String[] args) {
