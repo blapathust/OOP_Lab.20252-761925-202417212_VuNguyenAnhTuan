@@ -41,7 +41,7 @@ public class Cart {
 
         String added = dvd1.getTitle() + " and " + dvd2.getTitle();
 
-        cost += getCost(dvd1) + getCost(dvd2);
+        cost += dvd1.getCost() + dvd2.getCost();
 
         itemsOrdered.add(dvd1);
         itemsOrdered.add(dvd2);
@@ -68,4 +68,17 @@ public class Cart {
     {
         return cost;
     }
+
+    public void CartInfo()
+    {
+        int i = 1;
+
+        System.out.println("***********************CART***********************");
+        for (DVD dvd: itemsOrdered) {
+            System.out.print(i + ". " + dvd.DVDtoString(dvd) + '\n');
+            i++;
+        }
+        System.out.println("Total cost: " + cost + "$");
+        System.out.println("**************************************************");
+    }    
 }
