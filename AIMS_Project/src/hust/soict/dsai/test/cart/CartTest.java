@@ -2,6 +2,7 @@ package hust.soict.dsai.test.cart;
 
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.disc.DVD;
+import java.util.ArrayList;
 
 public class CartTest {
     public static void main(String[] args) {
@@ -24,5 +25,12 @@ public class CartTest {
         //Test the print method
         cart.CartInfo();
         //To-do: Test the search methods here
+        DVD target = cart.searchByID(3);
+        System.out.println(target.DVDtoString(target));
+
+        ArrayList<String> keywords = new ArrayList<>();
+        keywords.add("Aladin");
+        keywords.add("Star");
+        cart.searchByTitle(keywords).forEach(dvd -> System.out.println(dvd.DVDtoString(dvd)));
     }
 }

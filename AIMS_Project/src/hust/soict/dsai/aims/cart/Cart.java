@@ -1,6 +1,7 @@
 package hust.soict.dsai.aims.cart;
 
 import hust.soict.dsai.aims.disc.DVD;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Cart {
@@ -80,5 +81,36 @@ public class Cart {
         }
         System.out.println("Total cost: " + cost + "$");
         System.out.println("**************************************************");
-    }    
+    }
+
+    public DVD searchByID(int id)
+    {
+        for (DVD dvd: itemsOrdered) {
+            if (dvd.getID() == id) return dvd;
+        }
+
+        return null;
+    }
+
+    public ArrayList<DVD> searchByTitle(ArrayList<String> keywords)
+    {
+        ArrayList<DVD> result = new ArrayList<>();
+
+        for (DVD dvd: itemsOrdered) {
+
+            String title = dvd.getTitle();
+
+            for (String keyword: keywords) {
+                if (title.contains(keyword)) {
+
+                    result.add(dvd);
+
+                    break;
+                }
+            }
+
+        }
+
+        return result;
+    }
 }
