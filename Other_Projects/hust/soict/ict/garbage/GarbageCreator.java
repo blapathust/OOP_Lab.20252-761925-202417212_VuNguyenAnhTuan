@@ -17,6 +17,7 @@ public class GarbageCreator {
         outputStringBuilder.append((char) b);
         }
         endTime = System.currentTimeMillis();
-        System.out.println(endTime - startTime);    
+        System.out.println(endTime - startTime);
+        int i = 0;    
     }
 }
