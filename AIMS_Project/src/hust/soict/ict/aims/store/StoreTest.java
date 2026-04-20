@@ -13,7 +13,7 @@ public class StoreTest {
         DVD dvd2 = new DVD("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
         store.addDVD(dvd2);
 
-        DVD dvd3 = new DVD("Aladdin", "Animation", 18.99f);
+        DVD dvd3 = new DVD("Aladdin", "Animation", "Ron Clements", 90, 18.99f);
         store.addDVD(dvd3);
 
         store.removeDVD(dvd2);

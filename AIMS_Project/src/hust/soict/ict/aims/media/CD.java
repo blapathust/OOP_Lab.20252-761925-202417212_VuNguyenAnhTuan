@@ -26,14 +26,20 @@ public class CD extends Disc implements Playable {
             return length;
         }
 
+        @Override
         public void play() { 
             System.out.println("Playing DVD: " + this.getTitle()); 
             System.out.println("DVD length: " + this.getLength()); 
         }
+
+        @Override
+        public String toString() {
+            return this.getTitle() + ": " + this.getLength() + "s";
+        }
     }
 
     private String artist;
-    private ArrayList<Track> tracks = new ArrayList<Track>();
+    private final ArrayList<Track> tracks = new ArrayList<Track>();
 
     public String getArtist() {
         return artist;
@@ -55,6 +61,7 @@ public class CD extends Disc implements Playable {
         tracks.remove(track);
     }
 
+    @Override
     public int getLength() {
         int totalLength = 0;
         for (Track track : tracks) {
@@ -63,6 +70,7 @@ public class CD extends Disc implements Playable {
         return totalLength;
     }
 
+    @Override
     public void play() { 
         
         System.out.println("Playing CD: " + this.getTitle());
@@ -70,5 +78,17 @@ public class CD extends Disc implements Playable {
         for (Track track : tracks) {
             track.play();
         }
+    }
+
+    @Override
+    public String toString() {
+        
+        String result = "CD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getArtist() + ": " + this.getCost() + "$";
+
+        for (Track track : tracks) {
+            result += "\n  " + track.toString();
+        }
+
+        return result;
     }
 }

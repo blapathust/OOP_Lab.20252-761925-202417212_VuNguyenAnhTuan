@@ -29,6 +29,8 @@ public class Book extends Media {
 
         super(title, category, cost);
     }
-
     
+    public String toString() {
+        return "Book - " + getTitle() + " - " + getCategory() + " - " + getCost() + "$ - " + getAuthors();
+    }
 }
