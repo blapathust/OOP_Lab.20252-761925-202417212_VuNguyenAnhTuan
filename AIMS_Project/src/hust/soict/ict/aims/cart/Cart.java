@@ -1,5 +1,6 @@
 package hust.soict.ict.aims.cart;
 
+import hust.soict.ict.aims.media.CD;
 import hust.soict.ict.aims.media.Media;
 import java.util.ArrayList;
 
@@ -27,5 +28,17 @@ public class Cart {
         } else {
             System.out.println("The media is not in the cart.");
         }
+    }
+
+    public float getCost() {
+        return cost;
+    }
+
+    boolean equals(Media media1, Media media2) {
+        return media1.getTitle().equals(media2.getTitle());
+    }
+
+    boolean equals(CD.Track track1, CD.Track track2) {
+        return track1.getTitle().equals(track2.getTitle()) && track1.getLength() == track2.getLength();
     }
 }
