@@ -43,6 +43,15 @@ public class Cart {
         return track1.getTitle().equals(track2.getTitle()) && track1.getLength() == track2.getLength();
     }
 
+    public boolean findMedia(Media media) {
+        for (Media item : itemsOrdered) {
+            if (equals(item, media) || (item instanceof CD && media instanceof CD && equals(item, media))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public ArrayList<Media> searchByTitle(ArrayList<String> keywords) {
         ArrayList<Media> result = new ArrayList<>();
         for (Media media : itemsOrdered) {

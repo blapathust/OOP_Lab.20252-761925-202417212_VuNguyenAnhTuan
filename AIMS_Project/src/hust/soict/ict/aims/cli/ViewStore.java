@@ -63,7 +63,7 @@ public abstract class ViewStore {
 
                     while (input != 0) {
                         input = OptionsMenu();
-                        if (input == 1) {
+                        if (input == 1 && !cart.findMedia(media)) {
                             cart.addMedia(media);
                         }
                         if (input == 2) {
