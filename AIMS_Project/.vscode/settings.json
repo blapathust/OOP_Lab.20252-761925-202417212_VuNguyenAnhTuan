@@ -3,9 +3,13 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
+<<<<<<< HEAD
     ],
     "chat.tools.terminal.autoApprove": {
         "java": true,
         "javac": true
     }
+=======
+    ]
+>>>>>>> 55ae38ac4b4d5cfdd8c91e878eeba02dd428d6e5
 }
