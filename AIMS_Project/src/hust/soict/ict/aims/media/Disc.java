@@ -1,6 +1,6 @@
 package hust.soict.ict.aims.media;
 
-public class Disc extends Media {
+public class Disc extends Media implements Playable {
 
     private String director;
     private int length;
@@ -30,5 +30,11 @@ public class Disc extends Media {
     @Override
     public String toString() {
         return this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + ": " + this.getCost() + "$";
+    }
+
+    @Override
+    public void play() {
+        System.out.println("Playing disc: " + this.getTitle());
+        System.out.println("Disc length: " + this.getLength());
     }
 }

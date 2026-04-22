@@ -4,6 +4,8 @@ import java.util.Comparator;
 
 public abstract class Media {
 
+    private static int mediaNumber = 0;
+
     private int id;
     private String title;
     private String category;
@@ -16,6 +18,9 @@ public abstract class Media {
         this.title = title;
         this.category = category;
         this.cost = cost;
+
+        mediaNumber++;
+        this.id = mediaNumber;
     }
 
     public int getId() {
@@ -50,8 +55,16 @@ public abstract class Media {
         this.cost = cost;
     }
 
+    public static int getMediaNumber() {
+        return mediaNumber;
+    }
+
+    public static void setMediaNumber(int mediaNumber) {
+        Media.mediaNumber = mediaNumber;
+    }
+
     @Override
     public String toString() {
-        return this.getTitle() + " - " + this.getCategory() + ": " + this.getCost() + "$";
+        return "ID: " + this.getId() + " - " + this.getTitle() + " - " + this.getCategory() + ": " + this.getCost() + "$";
     }
 }

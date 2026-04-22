@@ -2,7 +2,7 @@ package hust.soict.ict.aims.media;
 
 import java.util.ArrayList;
 
-public class CD extends Disc implements Playable {
+public class CD extends Disc {
 
     public CD(String title, String category, String director, int length, float cost) {
 
@@ -27,9 +27,9 @@ public class CD extends Disc implements Playable {
         }
 
         @Override
-        public void play() { 
-            System.out.println("Playing DVD: " + this.getTitle()); 
-            System.out.println("DVD length: " + this.getLength()); 
+        public void play() {
+            System.out.println("Playing DVD: " + this.getTitle());
+            System.out.println("DVD length: " + this.getLength());
         }
 
         @Override
@@ -39,7 +39,7 @@ public class CD extends Disc implements Playable {
     }
 
     private String artist;
-    private final ArrayList<Track> tracks = new ArrayList<Track>();
+    private final ArrayList<Track> tracks = new ArrayList<>();
 
     public String getArtist() {
         return artist;
@@ -71,8 +71,8 @@ public class CD extends Disc implements Playable {
     }
 
     @Override
-    public void play() { 
-        
+    public void play() {
+
         System.out.println("Playing CD: " + this.getTitle());
 
         for (Track track : tracks) {
@@ -82,8 +82,9 @@ public class CD extends Disc implements Playable {
 
     @Override
     public String toString() {
-        
-        String result = "CD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getArtist() + ": " + this.getCost() + "$";
+
+        String result = "ID: " + this.getId() + " - CD - " + this.getTitle() + " - " + this.getCategory() + " - "
+                + this.getArtist() + ": " + this.getCost() + "$";
 
         for (Track track : tracks) {
             result += "\n  " + track.toString();
