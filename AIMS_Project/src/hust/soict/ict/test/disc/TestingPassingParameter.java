@@ -1,13 +1,13 @@
 package hust.soict.ict.test.disc;
 
-import hust.soict.ict.aims.disc.DVD;
+import hust.soict.ict.aims.media.DVD;
 
 public class TestingPassingParameter {
     
     public static void main(String[] args) {
         
-        DVD jungle = new DVD("Jungle");
-        DVD cinderella = new DVD("Cinderella");
+        DVD jungle = new DVD("Jungle", "Adventure", "Gregg Vanzo", 102, 19.95f);
+        DVD cinderella = new DVD("Cinderella", "Romance", "Clyde Geronimi", 95, 18.99f);
 
         swap(jungle, cinderella);
         System.out.println("Jungle DVD title: " + jungle.getTitle());
@@ -28,6 +28,6 @@ public class TestingPassingParameter {
         
         String old = dvd.getTitle();
         dvd.setTitle(new_title);
-        dvd = new DVD(old);
+        dvd = new DVD(old, dvd.getCategory(), dvd.getDirector(), dvd.getLength(), dvd.getCost());
     }
 }
