@@ -1,10 +1,6 @@
 package hust.soict.ict.test.disc;
 
-<<<<<<< HEAD
 import hust.soict.ict.aims.media.DVD;
-=======
-import hust.soict.ict.aims.disc.DVD;
->>>>>>> 55ae38ac4b4d5cfdd8c91e878eeba02dd428d6e5
 
 public class TestingPassingParameter {
     

@@ -1,16 +1,10 @@
 package hust.soict.ict.aims.store;
 
-<<<<<<< HEAD
 import hust.soict.ict.aims.media.Media;
-=======
-import hust.soict.ict.aims.disc.DVD;
-
->>>>>>> 55ae38ac4b4d5cfdd8c91e878eeba02dd428d6e5
 import java.util.ArrayList;
 
 public class Store {
 
-<<<<<<< HEAD
     ArrayList<Media> itemsInStore = new ArrayList<>();
 
     public void addMedia(Media media)
@@ -52,19 +46,5 @@ public class Store {
             }
         }
         return null;
-=======
-    ArrayList<DVD> itemsInStore = new ArrayList<>();
-
-    public void addDVD(DVD dvd)
-    {
-        itemsInStore.add(dvd);
-        System.out.println("Added " + dvd.getTitle() + " to store.");
-    }
-
-    public void removeDVD(DVD dvd)
-    {
-        itemsInStore.remove(dvd);
-        System.out.println("Removed " + dvd.getTitle() + " from store.");
->>>>>>> 55ae38ac4b4d5cfdd8c91e878eeba02dd428d6e5
     }
 }

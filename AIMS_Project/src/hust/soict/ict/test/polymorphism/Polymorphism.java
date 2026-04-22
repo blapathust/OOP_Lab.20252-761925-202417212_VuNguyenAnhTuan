@@ -10,7 +10,7 @@ public class Polymorphism {
 
     public static void main(String[] args) {
         
-        ArrayList<Media> mediaList = new ArrayList<Media>();
+        ArrayList<Media> mediaList = new ArrayList<>();
 
         DVD dvd1 = new DVD("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
         mediaList.add(dvd1);

@@ -3,12 +3,12 @@ package hust.soict.ict.aims.cli;
 import hust.soict.ict.aims.cart.Cart;
 import hust.soict.ict.aims.media.Disc;
 import hust.soict.ict.aims.media.Media;
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class CartMenu {
 
-    static final Scanner scanner = AIMS.scanner;
+    static final Scanner scanner = new Scanner(System.in);
 
     public void showCartMenu(Cart cart) {
         int input;
@@ -25,7 +25,8 @@ public class CartMenu {
             input = scanner.nextInt();
             scanner.nextLine();
 
-            OUTER: switch (input) {
+            OUTER:
+            switch (input) {
                 case 1 -> {
                     System.out.println("Filter by: 1. Title; 2. ID; 0. Back");
                     input = scanner.nextInt();
@@ -39,7 +40,7 @@ public class CartMenu {
                                 keyword.add(k.trim());
                             }
                             cart.searchByTitle(keyword).forEach(media -> System.out.println(media.toString()));
-                        }
+                    }
                         case 2 -> {
                             System.out.println("Enter ID: ");
                             int id = scanner.nextInt();
@@ -50,9 +51,9 @@ public class CartMenu {
                             } else {
                                 System.out.println("No media found.");
                             }
-                        }
+                    }
                         case 0 -> {
-                        }
+                    }
                         default -> System.out.println("Invalid option.");
                     }
                 }
@@ -65,7 +66,7 @@ public class CartMenu {
                         case 2 -> cart.sortByCost();
                         case 0 -> {
                             break OUTER;
-                        }
+                    }
                         default -> System.out.println("Invalid option.");
                     }
                 }
@@ -84,8 +85,7 @@ public class CartMenu {
                     String titleToPlay = scanner.nextLine();
                     Media mediaToPlay = cart.searchByTitle_Perfect(titleToPlay);
                     if (mediaToPlay != null) {
-                        if (mediaToPlay instanceof Disc disc)
-                            disc.play();
+                        if (mediaToPlay instanceof Disc disc) disc.play();
                         else {
                             System.out.println("The media cannot be played.");
                         }
