@@ -1,7 +1,7 @@
 package hust.soict.ict.aims.media;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Book extends Media {
 
@@ -27,7 +27,7 @@ public class Book extends Media {
         authors.remove(authorName);
     }
 
-    private List<String> authors = new ArrayList<String>();
+    private List<String> authors = new ArrayList<>();
 
     @Override
     public String toString() {
